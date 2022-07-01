@@ -5,13 +5,22 @@
         private string empName;
         private int empID;
         private float currPay;
+        private int empAge;
 
         public Employee() { }
         public Employee(string name, int id, float pay)
+            : this(name, 0, id, pay) { }
+        public Employee(string name, int age, int id, float pay)
         {
             empName = name;
+            empAge = age;
             empID = id;
             currPay = pay;
+        }
+        public int Age
+        {
+            get { return empAge; }
+            set { empAge = value; }
         }
         public string Name
         {
@@ -43,6 +52,7 @@
         public void DisplayStats()
         {
             Console.WriteLine($"Name: {empName}");
+            Console.WriteLine($"Age: {empAge}");
             Console.WriteLine($"ID: {empID}");
             Console.WriteLine($"Pay: {currPay}");
         }
