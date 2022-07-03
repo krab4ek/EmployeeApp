@@ -6,7 +6,8 @@ emp.DisplayStats();
 emp.Name = "Marv";
 Console.WriteLine($"Employee is named: {emp.Name}");
 
-//joe.Age++;
-//Console.WriteLine($"Joe age is:{joe.Age}");
+
+
+
 
 Console.ReadLine();
