@@ -1,13 +1,13 @@
 ﻿namespace EmployeeApp
 {
-    internal partial class Employee
+    internal abstract partial class Employee
 
     {
-        protected string empName;
+        protected string? empName;
         protected int empID;
         protected float currPay;
         protected int empAge;
-        protected string empSSN;
+        protected string? empSSN;
 
         protected BenefitPackage empBenefits = new BenefitPackage();
         public Employee() { }

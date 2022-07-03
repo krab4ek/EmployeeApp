@@ -1,6 +1,6 @@
 ﻿namespace EmployeeApp
 {
-    internal partial class Employee
+    internal abstract partial class Employee
     {
 
         public int Age
@@ -34,18 +34,19 @@
             get { return empBenefits; }
             set { empBenefits = value; }
         }
-        public void GiveBonus(float amount)
+        public virtual void GiveBonus(float amount)
         {
             currPay += amount;
 
         }
 
-        public void DisplayStats()
+        public virtual void DisplayStats()
         {
-            Console.WriteLine($"Name: {empName}");
-            Console.WriteLine($"Age: {empAge}");
-            Console.WriteLine($"ID: {empID}");
-            Console.WriteLine($"Pay: {currPay}");
+            Console.WriteLine($"Name: \t{empName}");
+            Console.WriteLine($"Age: \t{empAge}");
+            Console.WriteLine($"ID: \t{empID}");
+            Console.WriteLine($"Pay: \t{currPay}");
+            Console.WriteLine($"SSN: \t{empSSN}");
         }
         public double GetBenefitCost()
         {
