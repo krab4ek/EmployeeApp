@@ -13,8 +13,15 @@ SalesPerson fred = new SalesPerson();
 fred.Age = 31;
 fred.Name = "Fred";
 fred.SalesNumber = 50;
-
+fred.DisplayStats();
 Console.WriteLine();
+
+var chucky = new Manager("Chucky", 50, 92, 11000, "3333-999-0000", 9000);
+var cost = chucky.GetBenefitCost();
+chucky.DisplayStats();
+Console.WriteLine();
+
+BenefitPackage.BenefitPackageLevel myLevel = BenefitPackage.BenefitPackageLevel.Gold;
 
 
 

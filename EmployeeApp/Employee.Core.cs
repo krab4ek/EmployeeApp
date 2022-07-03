@@ -9,6 +9,7 @@
         protected int empAge;
         protected string empSSN;
 
+        protected BenefitPackage empBenefits = new BenefitPackage();
         public Employee() { }
         public Employee(string name, int id, float pay)
             : this(name, 0, id, pay) { }

@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EmployeeApp
+﻿namespace EmployeeApp
 {
-    internal sealed class PTSalesPerson:SalesPerson
+    internal sealed class PTSalesPerson : SalesPerson
     {
         public PTSalesPerson(string fullName, int age, int empID, float currPay,
             string ssn, int numbOfSales)

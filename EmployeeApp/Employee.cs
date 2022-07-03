@@ -2,7 +2,7 @@
 {
     internal partial class Employee
     {
-        
+
         public int Age
         {
             get { return empAge; }
@@ -29,6 +29,11 @@
             get { return currPay; }
             set { currPay = value; }
         }
+        public BenefitPackage Benefits
+        {
+            get { return empBenefits; }
+            set { empBenefits = value; }
+        }
         public void GiveBonus(float amount)
         {
             currPay += amount;
@@ -41,6 +46,10 @@
             Console.WriteLine($"Age: {empAge}");
             Console.WriteLine($"ID: {empID}");
             Console.WriteLine($"Pay: {currPay}");
+        }
+        public double GetBenefitCost()
+        {
+            return empBenefits.ComputePayDeduction();
         }
     }
 }

@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EmployeeApp
+﻿namespace EmployeeApp
 {
-    internal class Manager:Employee
+    internal class Manager : Employee
     {
         public int StockOptions { get; set; }
         public Manager()
