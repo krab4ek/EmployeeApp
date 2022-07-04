@@ -63,6 +63,8 @@ foreach (object item in things)
     }
 }
 
+GivePromotion(fran);
+GivePromotion(chucky);
 
 static void CastingExamples()
 {
@@ -83,6 +85,33 @@ static void CastingExamples()
 static void GivePromotion(Employee emp)
 {
     Console.WriteLine($"{emp.Name} was promoted!");
+    //if (emp is SalesPerson s)
+    //{
+    //    Console.WriteLine($"{emp.Name} made {s.SalesNumber} sale(s)!");
+    //    Console.WriteLine();    
+    //}
+    //if (emp is Manager m)
+    //{
+    //    Console.WriteLine($"{emp.Name} had {m.StockOptions} stock options...");
+    //    Console.WriteLine();
+    //}
+
+    switch (emp)
+    {
+        case SalesPerson s when s.SalesNumber > 5:
+            Console.WriteLine($"{emp.Name} made {s.SalesNumber} sale(s)!");
+            Console.WriteLine();
+            break;
+        case Manager m:
+            Console.WriteLine($"{emp.Name} had {m.StockOptions} stock options...");
+            Console.WriteLine();
+            break;
+        case null:
+        default: break;
+    }
+    Console.WriteLine();
+
+
 }
 
 
